@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\products;
 use App\Models\transaction as Transaction;
-use App\Models\transactiondetail as TransactionDetail;
+use App\Models\TransactionDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

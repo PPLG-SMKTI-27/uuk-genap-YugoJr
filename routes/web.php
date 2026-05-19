@@ -23,7 +23,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/transactions', [TransactionController::class, 'transactionStore'])->name('transactions.store');
     Route::get('/transactions/{transaction}/edit', [TransactionController::class, 'transactionEdit'])->name('transactions.edit');
     Route::put('/transactions/{transaction}', [TransactionController::class, 'transactionUpdate'])->name('transactions.update');
-    Route::delete('/transactions/{transaction}', [TransactionController::class, 'transactionDestroy'])->name('transaction.destroy');
+    Route::delete('/transactions/{transaction}', [TransactionController::class, 'transactionDestroy'])->name('transactions.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
