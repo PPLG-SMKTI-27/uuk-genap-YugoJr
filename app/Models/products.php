@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class products extends Model
+{
+    protected $fillable = [
+        'category_id',
+        'product_name',
+        'price',
+        'stock',
+        'unit',
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(categories::class);
+    }
+
+    public function transactionDetails()
+    {
+        return $this->hasMany(transactiondetail::class, 'product_id');
+    }
+}
